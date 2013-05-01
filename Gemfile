@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org/'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.beta1'
@@ -6,6 +6,10 @@ gem 'rails', '4.0.0.beta1'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'guard-spork'
+  # gem 'spork'
+  gem 'spork-rails', github: 'railstutorial/spork-rails'
 end
 
 # Gems used only for assets and not required
@@ -24,6 +28,8 @@ gem 'jquery-rails'
 
 group :test do
   gem 'capybara'
+  gem 'rb-fsevent',:require => false
+  gem 'growl'
 end
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
